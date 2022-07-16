@@ -12,6 +12,6 @@ module.exports = function (req,res,next){
         req.user = decoded
         next()
     }catch (e){
-        res.status(401).json({message:"Пользователь не авторизован!"})
+        return res.status(401).json({message:"Пользователь не авторизован!"})
     }
 }
